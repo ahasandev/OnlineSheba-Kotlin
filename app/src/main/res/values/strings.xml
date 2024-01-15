@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">OnlineSheba</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="close_drawer">Drawer Close</string>
+    <string name="open_drawer">Drawer Open</string>
+
+</resources>
