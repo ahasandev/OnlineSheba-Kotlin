@@ -8,6 +8,8 @@ import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.core.view.GravityCompat
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.GridLayoutManager
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.StaggeredGridLayoutManager
 import com.denzcoskun.imageslider.constants.ScaleTypes
 import com.denzcoskun.imageslider.models.SlideModel
 import com.kingtech.onlinesheba.R
@@ -28,23 +30,22 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>(FragmentHomeBinding::infl
         setDate()
 
 
-        val layoutManager = GridLayoutManager(requireContext(),3)
+
+        val linearLayoutManager = LinearLayoutManager(requireContext())
+        val gridLayoutManager = GridLayoutManager(requireContext(), 3) // Specify the number of columns in the grid
+        val staggeredGridLayoutManager = StaggeredGridLayoutManager(2, StaggeredGridLayoutManager.VERTICAL)
 
 
         binding.gridviewer.setOnClickListener {
-            when (layoutManager.spanCount) {
-                3 -> {
-                    val manager = GridLayoutManager(requireContext(), 2)
-                    setAdapter(manager)
-                }
-                2 ->{
-                    setAdapter(layoutManager)
-                }
-
+            binding.recyclerview.layoutManager = when (binding.recyclerview.layoutManager) {
+                is GridLayoutManager -> staggeredGridLayoutManager
+                is LinearLayoutManager -> gridLayoutManager
+                is StaggeredGridLayoutManager -> linearLayoutManager
+                else -> linearLayoutManager
             }
 
         }
-        setAdapter(layoutManager)
+        setAdapter(gridLayoutManager)
 
         binding.noticeText.isSelected = true
 
