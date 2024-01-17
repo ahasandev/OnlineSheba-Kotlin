@@ -1,4 +1,4 @@
-package com.kingtech.onlinesheba.fragments
+package com.kingtech.onlinesheba.fragments.ui
 
 import android.os.Bundle
 import android.view.View
@@ -14,8 +14,9 @@ import com.denzcoskun.imageslider.constants.ScaleTypes
 import com.denzcoskun.imageslider.models.SlideModel
 import com.kingtech.onlinesheba.R
 import com.kingtech.onlinesheba.adapter.CategoryAdapter
-import com.kingtech.onlinesheba.data.CategoryData.categoryData
+import com.kingtech.onlinesheba.model.data.CategoryData.categoryData
 import com.kingtech.onlinesheba.databinding.FragmentHomeBinding
+import com.kingtech.onlinesheba.fragments.BaseFragment
 import java.text.SimpleDateFormat
 import java.util.Date
 import java.util.Locale
@@ -99,7 +100,7 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>(FragmentHomeBinding::infl
 
     private fun setAdapter(manager : GridLayoutManager) {
         binding.recyclerview.layoutManager = manager
-        binding.recyclerview.adapter = CategoryAdapter(categoryData,requireContext())
+        binding.recyclerview.adapter = CategoryAdapter(categoryData)
 
     }
 

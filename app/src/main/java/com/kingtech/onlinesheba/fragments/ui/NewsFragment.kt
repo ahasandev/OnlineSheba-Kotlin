@@ -1,12 +1,13 @@
-package com.kingtech.onlinesheba.fragments
+package com.kingtech.onlinesheba.fragments.ui
 
 
 import android.os.Bundle
 import android.view.View
 import androidx.recyclerview.widget.GridLayoutManager
 import com.kingtech.onlinesheba.adapter.NewsAdapter
-import com.kingtech.onlinesheba.data.CategoryData.newsData
+import com.kingtech.onlinesheba.model.data.CategoryData.newsData
 import com.kingtech.onlinesheba.databinding.FragmentNewsBinding
+import com.kingtech.onlinesheba.fragments.BaseFragment
 
 
 class NewsFragment : BaseFragment<FragmentNewsBinding>(FragmentNewsBinding::inflate) {

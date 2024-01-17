@@ -1,8 +1,9 @@
-package com.kingtech.onlinesheba.data
+package com.kingtech.onlinesheba.model.data
 
 import com.kingtech.onlinesheba.R
 import com.kingtech.onlinesheba.model.Ambulance
 import com.kingtech.onlinesheba.model.Category
+import com.kingtech.onlinesheba.model.Details
 import com.kingtech.onlinesheba.model.Fair
 import com.kingtech.onlinesheba.model.News
 
@@ -53,4 +54,30 @@ object CategoryData {
 
 
         )
+
+    val thanaData = mutableListOf<Details>(
+
+        Details("","","","242"),
+        Details("fsafas","","",""),
+        Details("sadf","","asda","asfas"),
+    )
+
+    val lowerData = mutableListOf<Details>(
+
+        Details("sfaf","","0000",""),
+        Details("fsafa","","",""),
+        Details("fasf","asf","afs",""),
+        Details("fasf","asf","afs",""),
+    )
+
+    val helplineData = mutableListOf<Details>(
+
+        Details("faf","","456345364",""),
+        Details("fasf","","4536",""),
+        Details("fasf","","45345",""),
+        Details("fasf","","45345",""),
+        Details("fasf","","45345",""),
+    )
+
+
 }

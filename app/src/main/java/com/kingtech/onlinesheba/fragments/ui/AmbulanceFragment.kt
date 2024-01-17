@@ -1,12 +1,13 @@
-package com.kingtech.onlinesheba.fragments
+package com.kingtech.onlinesheba.fragments.ui
 
 import android.os.Bundle
 import android.view.View
 import androidx.recyclerview.widget.GridLayoutManager
 import com.kingtech.onlinesheba.adapter.AmbulanceAdapter
-import com.kingtech.onlinesheba.data.CategoryData.ambulanceData
+import com.kingtech.onlinesheba.model.data.CategoryData.ambulanceData
 
 import com.kingtech.onlinesheba.databinding.FragmentAmbulanceBinding
+import com.kingtech.onlinesheba.fragments.BaseFragment
 
 
 class AmbulanceFragment : BaseFragment<FragmentAmbulanceBinding>(FragmentAmbulanceBinding::inflate) {

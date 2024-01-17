@@ -1,15 +1,13 @@
-package com.kingtech.onlinesheba.fragments
+package com.kingtech.onlinesheba.fragments.ui
 
 import android.os.Bundle
 import android.view.View
-import androidx.activity.OnBackPressedCallback
-import androidx.activity.addCallback
 import androidx.recyclerview.widget.GridLayoutManager
-import com.kingtech.onlinesheba.adapter.AmbulanceAdapter
 import com.kingtech.onlinesheba.adapter.FairAdapter
-import com.kingtech.onlinesheba.data.CategoryData
+import com.kingtech.onlinesheba.model.data.CategoryData
 
 import com.kingtech.onlinesheba.databinding.FragmentFairBinding
+import com.kingtech.onlinesheba.fragments.BaseFragment
 
 class FairFragment : BaseFragment<FragmentFairBinding>(FragmentFairBinding::inflate) {
 

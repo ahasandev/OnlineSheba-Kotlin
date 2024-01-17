@@ -7,7 +7,7 @@
     android:id="@+id/drawerlayout"
     tools:openDrawer="end"
     android:fitsSystemWindows="true"
-    tools:context=".fragments.HomeFragment">
+    tools:context=".fragments.ui.HomeFragment">
 
         <RelativeLayout
             android:layout_width="match_parent"

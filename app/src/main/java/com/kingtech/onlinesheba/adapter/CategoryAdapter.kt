@@ -1,16 +1,15 @@
 package com.kingtech.onlinesheba.adapter
 
-import android.content.Context
+import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.ViewGroup
-import android.widget.Toast
 import androidx.navigation.findNavController
 import androidx.recyclerview.widget.RecyclerView
 import com.kingtech.onlinesheba.R
 import com.kingtech.onlinesheba.databinding.CategoryItemBinding
 import com.kingtech.onlinesheba.model.Category
 
-class CategoryAdapter(private val categoryList : List<Category>, private val context: Context):RecyclerView.Adapter<CategoryAdapter.CategoryViewHolder>() {
+class CategoryAdapter(private val categoryList: List<Category>):RecyclerView.Adapter<CategoryAdapter.CategoryViewHolder>() {
 
     class CategoryViewHolder(val binding: CategoryItemBinding) : RecyclerView.ViewHolder(binding.root)
 
@@ -34,9 +33,21 @@ class CategoryAdapter(private val categoryList : List<Category>, private val con
                 0 -> view.findNavController().navigate(R.id.action_homeFragment_to_newsFragment)
                 1 -> view.findNavController().navigate(R.id.action_homeFragment_to_ambulanceFragment)
                 2 -> view.findNavController().navigate(R.id.action_homeFragment_to_fairFragment)
-                3 -> view.findNavController().navigate(R.id.action_homeFragment_to_fairFragment)
-                4 -> view.findNavController().navigate(R.id.action_homeFragment_to_fairFragment)
-                5 -> view.findNavController().navigate(R.id.action_homeFragment_to_fairFragment)
+                3 -> view.findNavController().navigate(R.id.action_homeFragment_to_detailsFragment,
+                    Bundle().apply {
+                        putInt("itemId",position)
+                    }
+                )
+                4 -> view.findNavController().navigate(R.id.action_homeFragment_to_detailsFragment,
+                    Bundle().apply {
+                        putInt("itemId",position)
+                    }
+                )
+                5 -> view.findNavController().navigate(R.id.action_homeFragment_to_detailsFragment,
+                    Bundle().apply {
+                        putInt("itemId",position)
+                    }
+                )
                 6 -> view.findNavController().navigate(R.id.action_homeFragment_to_fairFragment)
                 7 -> view.findNavController().navigate(R.id.action_homeFragment_to_fairFragment)
                 8 -> view.findNavController().navigate(R.id.action_homeFragment_to_fairFragment)

@@ -6,7 +6,7 @@ data class Category(
 )
 data class News (
     val tilte : String = "",
-    val image :String
+    val image :String = ""
 
 )
 data class Ambulance (
@@ -17,5 +17,11 @@ data class Fair(
     val tilte : String = "",
     val address :String = "",
     val number :String = "",
+)
+data class Details(
+    val tilte : String = "",
+    val address :String = "",
+    val number :String = "",
+    val image :String = ""
 )
 
