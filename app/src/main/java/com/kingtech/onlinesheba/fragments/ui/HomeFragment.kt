@@ -37,7 +37,7 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>(FragmentHomeBinding::infl
         val staggeredGridLayoutManager = StaggeredGridLayoutManager(2, StaggeredGridLayoutManager.VERTICAL)
 
 
-        binding.gridviewer.setOnClickListener {
+        binding.layoutClike.setOnClickListener {
             binding.recyclerview.layoutManager = when (binding.recyclerview.layoutManager) {
                 is GridLayoutManager -> staggeredGridLayoutManager
                 is LinearLayoutManager -> gridLayoutManager

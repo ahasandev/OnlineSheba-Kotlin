@@ -7,6 +7,7 @@ import android.content.Intent
 import android.content.pm.PackageManager
 import android.net.Uri
 import android.view.LayoutInflater
+import android.view.View
 import android.view.ViewGroup
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
@@ -38,7 +39,11 @@ class DetailsAdapter(private val detailsList: List<Details>, private val context
 
         val detail = detailsList[position]
         holder.binding.detailsTitle.text = detail.tilte
-        holder.binding.detailsAddress.text = detail.address
+        if (detail.address.length > 2 ){
+            holder.binding.detailsAddress.visibility = View.VISIBLE
+            holder.binding.detailsAddress.text = detail.address
+        }
+
         holder.binding.detailsNumber.text = detail.number
         holder.binding.fairCall.setOnClickListener {
 
