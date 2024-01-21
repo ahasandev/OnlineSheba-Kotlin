@@ -17,6 +17,7 @@ import com.kingtech.onlinesheba.adapter.CategoryAdapter
 import com.kingtech.onlinesheba.model.data.CategoryData.categoryData
 import com.kingtech.onlinesheba.databinding.FragmentHomeBinding
 import com.kingtech.onlinesheba.fragments.BaseFragment
+import com.qamar.curvedbottomnaviagtion.CurvedBottomNavigation
 import java.text.SimpleDateFormat
 import java.util.Date
 import java.util.Locale
@@ -29,6 +30,8 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>(FragmentHomeBinding::infl
         super.onViewCreated(view, savedInstanceState)
 
         setDate()
+
+        setUpBottomNavigation()
 
 
 
@@ -89,13 +92,21 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>(FragmentHomeBinding::infl
 
     }
 
-    override fun onDestroyView() {
-        super.onDestroyView()
+    private fun setUpBottomNavigation() {
+        val bottomNavigationItems = mutableListOf(
+            CurvedBottomNavigation.Model(R.id.action_homeFragment_to_detailsFragment, "Home", R.drawable.baseline_home_24),
+            CurvedBottomNavigation.Model(R.id.action_homeFragment_to_ambulanceFragment, "Setting", R.drawable.baseline_local_phone_24),
+            CurvedBottomNavigation.Model(R.id.action_homeFragment_to_newsFragment,"Profile", R.drawable.round_account_circle_24),
+
+        )
+        binding.bottomNavigation.apply {
+            bottomNavigationItems.forEach { add(it) }
+            setOnClickMenuListener {
+            findNavController()
+            }
+
+        }
     }
-
-
-
-
 
 
     private fun setAdapter(manager : GridLayoutManager) {

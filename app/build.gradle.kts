@@ -34,6 +34,7 @@ android {
         jvmTarget = "1.8"
     }
     buildFeatures {
+        dataBinding = true
         viewBinding = true
     }
 }
@@ -54,5 +55,7 @@ dependencies {
     implementation("com.github.denzcoskun:ImageSlideshow:0.1.2")
     //lottie animation
     implementation("com.airbnb.android:lottie:3.4.0")
+    //CurvedBottomNavigation
+    implementation ("com.github.qamarelsafadi:CurvedBottomNavigation:0.1.3")
 
 }
