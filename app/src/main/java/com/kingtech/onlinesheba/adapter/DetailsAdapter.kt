@@ -42,6 +42,8 @@ class DetailsAdapter(private val detailsList: List<Details>, private val context
         if (detail.address.length > 2 ){
             holder.binding.detailsAddress.visibility = View.VISIBLE
             holder.binding.detailsAddress.text = detail.address
+        }else{
+            holder.binding.detailsAddress.visibility = View.GONE
         }
 
         holder.binding.detailsNumber.text = detail.number

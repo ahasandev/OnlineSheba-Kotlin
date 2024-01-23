@@ -6,6 +6,7 @@ import androidx.activity.OnBackPressedCallback
 import androidx.activity.addCallback
 import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.core.view.GravityCompat
+import androidx.navigation.findNavController
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -94,15 +95,27 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>(FragmentHomeBinding::infl
 
     private fun setUpBottomNavigation() {
         val bottomNavigationItems = mutableListOf(
-            CurvedBottomNavigation.Model(R.id.action_homeFragment_to_detailsFragment, "Home", R.drawable.baseline_home_24),
-            CurvedBottomNavigation.Model(R.id.action_homeFragment_to_ambulanceFragment, "Setting", R.drawable.baseline_local_phone_24),
-            CurvedBottomNavigation.Model(R.id.action_homeFragment_to_newsFragment,"Profile", R.drawable.round_account_circle_24),
+            CurvedBottomNavigation.Model(1, " Home ", R.drawable.baseline_local_phone_24),
+            CurvedBottomNavigation.Model(2, " Setting ", R.drawable.baseline_home_24),
+            CurvedBottomNavigation.Model(3," Profile ", R.drawable.round_account_circle_24)
 
         )
         binding.bottomNavigation.apply {
-            bottomNavigationItems.forEach { add(it) }
+            bottomNavigationItems.forEach {
+                add(it)
+
+
+            }
             setOnClickMenuListener {
-            findNavController()
+
+                if (it.id==1){
+                    findNavController().navigate(R.id.action_homeFragment_to_newsFragment)
+                }else if (it.id==2){
+                    findNavController().navigate(R.id.action_homeFragment_to_ambulanceFragment)
+                }else if (it.id==3){
+                    findNavController().navigate(R.id.action_homeFragment_to_newsFragment)
+                }
+
             }
 
         }
