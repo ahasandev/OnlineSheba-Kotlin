@@ -56,6 +56,7 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>(FragmentHomeBinding::infl
 
         val toggle = ActionBarDrawerToggle(activity,binding.drawerlayout, R.string.open_drawer, R.string.close_drawer)
         binding.drawerlayout.addDrawerListener(toggle)
+
         binding.imageMenu.setOnClickListener { binding.drawerlayout.openDrawer(GravityCompat.START) }
 
         requireActivity().onBackPressedDispatcher.addCallback(this, onBackPressed = OnBackPressedCallback::handleOnBackPressed)

@@ -19,6 +19,8 @@ object CategoryData {
         Category("হাসপাতাল",""+ R.drawable.category_hospital),
         Category("ডাক্তার",""+ R.drawable.category_doctor),
         Category("ব্লাড ডোনার",""+ R.drawable.category_blood),
+        Category("ডাক্তার",""+ R.drawable.category_doctor),
+        Category("ব্লাড ডোনার",""+ R.drawable.category_blood),
 
 
     )
