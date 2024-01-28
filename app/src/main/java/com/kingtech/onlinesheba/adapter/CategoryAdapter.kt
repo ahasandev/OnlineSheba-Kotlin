@@ -31,8 +31,16 @@ class CategoryAdapter(private val categoryList: List<Category>):RecyclerView.Ada
 
             when (position) {
                 0 -> view.findNavController().navigate(R.id.action_homeFragment_to_newsFragment)
-                1 -> view.findNavController().navigate(R.id.action_homeFragment_to_ambulanceFragment)
-                2 -> view.findNavController().navigate(R.id.action_homeFragment_to_fairFragment)
+                1 -> view.findNavController().navigate(R.id.action_homeFragment_to_detailsFragment,
+                    Bundle().apply {
+                        putInt("itemId",position)
+                    }
+                )
+                2 -> view.findNavController().navigate(R.id.action_homeFragment_to_detailsFragment,
+                    Bundle().apply {
+                        putInt("itemId",position)
+                    }
+                )
                 3 -> view.findNavController().navigate(R.id.action_homeFragment_to_detailsFragment,
                     Bundle().apply {
                         putInt("itemId",position)

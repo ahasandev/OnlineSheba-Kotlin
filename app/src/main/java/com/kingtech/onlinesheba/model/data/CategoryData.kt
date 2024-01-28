@@ -34,25 +34,27 @@ object CategoryData {
         News("",""+R.drawable.news_prothomalop),
     )
 
-    val ambulanceData = mutableListOf<Ambulance>(
-        Ambulance("এ্যাম্বুলেন্স সার্ভিস-২","01717-8543"),
-        Ambulance("এ্যাম্বুলেন্স সার্ভিস","01717-8345447"),
-        Ambulance("এ্যাম্বুলেন্স সার্ভিস","01717-834448"),
-        Ambulance("এ্যাম্বুলেন্স সার্ভিস-২0","01717-44445"),
+
+
+
+    val ambulanceData = mutableListOf<Details>(
+        Details("এ্যাম্বুলেন্স সার্ভিস-২","","01717-8543"),
+        Details("এ্যাম্বুলেন্স সার্ভিস","","01717-8345447"),
+        Details("এ্যাম্বুলেন্স সার্ভিস","","01717-834448"),
+        Details("এ্যাম্বুলেন্স সার্ভিস-২0","","01717-44445"),
 
     )
 
-
-    val fairData = mutableListOf<Fair>(
-        Fair("Dinajpur Fair Service","Dinajpur","0123456789"),
-        Fair("Dinajpur Fair Service","Dinajpur","0123456789"),
-        Fair("Dinajpur Fair Service","Dinajpur","0123456789"),
-        Fair("Dinajpur Fair Service","Dinajpur","0123456789"),
-        Fair("Dinajpur Fair Service","Dinajpur","0123456789"),
-        Fair("Dinajpur Fair Service","Dinajpur","0123456789"),
-        Fair("Dinajpur Fair Service","Dinajpur","0123456789"),
-        Fair("Dinajpur Fair Service","Dinajpur","0123456789"),
-        Fair("Dinajpur Fair Service","Dinajpur","0123456789"),
+    val fairData = mutableListOf<Details>(
+        Details("Dinajpur Fair Service","Dinajpur","0123456789","dsf"),
+        Details("Dinajpur Fair Service","Dinajpur","0123456789"),
+        Details("Dinajpur Fair Service","Dinajpur","0123456789"),
+        Details("Dinajpur Fair Service","Dinajpur","0123456789"),
+        Details("Dinajpur Fair Service","Dinajpur","0123456789"),
+        Details("Dinajpur Fair Service","Dinajpur","0123456789"),
+        Details("Dinajpur Fair Service","Dinajpur","0123456789"),
+        Details("Dinajpur Fair Service","Dinajpur","0123456789"),
+        Details("Dinajpur Fair Service","Dinajpur","0123456789"),
 
 
         )

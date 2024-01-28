@@ -51,11 +51,12 @@ dependencies {
     androidTestImplementation("androidx.test.ext:junit:1.1.5")
     androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")
 
+    //kotlin-coroutines
+    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.7.3")
+
     // imgeslider
     implementation("com.github.denzcoskun:ImageSlideshow:0.1.2")
     //lottie animation
-    implementation("com.airbnb.android:lottie:3.4.0")
-    //CurvedBottomNavigation
-    implementation ("com.github.qamarelsafadi:CurvedBottomNavigation:0.1.3")
+    implementation("com.airbnb.android:lottie:6.3.0")
 
 }

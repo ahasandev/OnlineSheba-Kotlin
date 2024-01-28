@@ -20,8 +20,8 @@ class AmbulanceFragment : BaseFragment<FragmentAmbulanceBinding>(FragmentAmbulan
 
     private fun setDate() {
         val manager = GridLayoutManager(requireContext(), 1)
-        binding.rcvAmbulance.layoutManager = manager
-        binding.rcvAmbulance.adapter = AmbulanceAdapter(ambulanceData,requireContext())
+//        binding.rcvAmbulance.layoutManager = manager
+//        binding.rcvAmbulance.adapter = AmbulanceAdapter(ambulanceData,requireContext())
     }
 
 }

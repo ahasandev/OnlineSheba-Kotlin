@@ -23,8 +23,8 @@ class FairFragment : BaseFragment<FragmentFairBinding>(FragmentFairBinding::infl
 
     private fun setDate() {
         val manager = GridLayoutManager(requireContext(), 1)
-        binding.rcvFair.layoutManager = manager
-        binding.rcvFair.adapter = FairAdapter(CategoryData.fairData,requireContext())
+//        binding.rcvFair.layoutManager = manager
+//        binding.rcvFair.adapter = FairAdapter(CategoryData.fairData,requireContext())
     }
 
 

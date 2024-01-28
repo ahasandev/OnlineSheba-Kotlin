@@ -20,6 +20,8 @@ class DetailsFragment : BaseFragment<FragmentDetailsBinding>(FragmentDetailsBind
         binding.rcvDetails.layoutManager = LinearLayoutManager(requireContext())
 
         when(position){
+            1-> binding.rcvDetails.adapter = DetailsAdapter(CategoryData.ambulanceData,requireContext())
+            2-> binding.rcvDetails.adapter = DetailsAdapter(CategoryData.fairData,requireContext())
             3 -> binding.rcvDetails.adapter = DetailsAdapter(CategoryData.helplineData,requireContext())
             4 -> binding.rcvDetails.adapter = DetailsAdapter(CategoryData.thanaData,requireContext())
             5 -> binding.rcvDetails.adapter = DetailsAdapter(CategoryData.lowerData,requireContext())

@@ -6,7 +6,6 @@ import androidx.activity.OnBackPressedCallback
 import androidx.activity.addCallback
 import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.core.view.GravityCompat
-import androidx.navigation.findNavController
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -18,7 +17,9 @@ import com.kingtech.onlinesheba.adapter.CategoryAdapter
 import com.kingtech.onlinesheba.model.data.CategoryData.categoryData
 import com.kingtech.onlinesheba.databinding.FragmentHomeBinding
 import com.kingtech.onlinesheba.fragments.BaseFragment
-import com.qamar.curvedbottomnaviagtion.CurvedBottomNavigation
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.launch
 import java.text.SimpleDateFormat
 import java.util.Date
 import java.util.Locale
@@ -29,10 +30,13 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>(FragmentHomeBinding::infl
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
         setDate()
 
-        setUpBottomNavigation()
+        setImageSlider()
+
+
+
+
 
 
 
@@ -50,7 +54,11 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>(FragmentHomeBinding::infl
             }
 
         }
-        setAdapter(gridLayoutManager)
+        CoroutineScope(Dispatchers.IO).launch{
+            binding.recyclerview.layoutManager = gridLayoutManager
+            binding.recyclerview.adapter = CategoryAdapter(categoryData)
+        }
+
 
         binding.noticeText.isSelected = true
 
@@ -80,6 +88,14 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>(FragmentHomeBinding::infl
 
 
 
+
+
+
+
+
+    }
+
+    private fun setImageSlider() {
         val imageList = ArrayList<SlideModel>()
 
         imageList.add(SlideModel(R.drawable.dinajpur_5,ScaleTypes.CENTER_CROP))
@@ -88,46 +104,8 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>(FragmentHomeBinding::infl
         imageList.add(SlideModel(R.drawable.dinajpur3,ScaleTypes.CENTER_CROP))
         binding.imageSlider.setImageList(imageList)
 
-
-
-
-
     }
 
-    private fun setUpBottomNavigation() {
-        val bottomNavigationItems = mutableListOf(
-            CurvedBottomNavigation.Model(1, " Home ", R.drawable.baseline_local_phone_24),
-            CurvedBottomNavigation.Model(2, " Setting ", R.drawable.baseline_home_24),
-            CurvedBottomNavigation.Model(3," Profile ", R.drawable.round_account_circle_24)
-
-        )
-        binding.bottomNavigation.apply {
-            bottomNavigationItems.forEach {
-                add(it)
-
-
-            }
-            setOnClickMenuListener {
-
-                if (it.id==1){
-                    findNavController().navigate(R.id.action_homeFragment_to_newsFragment)
-                }else if (it.id==2){
-                    findNavController().navigate(R.id.action_homeFragment_to_ambulanceFragment)
-                }else if (it.id==3){
-                    findNavController().navigate(R.id.action_homeFragment_to_newsFragment)
-                }
-
-            }
-
-        }
-    }
-
-
-    private fun setAdapter(manager : GridLayoutManager) {
-        binding.recyclerview.layoutManager = manager
-        binding.recyclerview.adapter = CategoryAdapter(categoryData)
-
-    }
 
 
     private fun setDate() {
