@@ -15,7 +15,6 @@
       Coil for image loading
 
 🔆SCREENS
-       
 <table>
   <tr>
     <td>First Screen</td>
