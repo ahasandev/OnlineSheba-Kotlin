@@ -1,17 +1,17 @@
 💻Technology stack
 
-Android Studio
+       Android Studio
 
-Firebase (Backend)
+       Firebase (Backend)
 
-Kotlin (Language)
+       Kotlin (Language)
+ 
+🔆Dependencies 
 
-Dependencies 🔆
+       Viewbinding
 
-Viewbinding
+       Navigation Fragmets
 
-Navigation Fragmets
-
-Coil for image loading
-
+      Coil for image loading
+  
 
