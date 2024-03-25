@@ -18,9 +18,9 @@
        
 <table>
   <tr>
-    <td>First Screen Page</td>
-     <td>Holiday Mention</td>
-     <td>Present day in purple and selected day in pink</td>
+    <td>First Screen</td>
+     <td>Sceond Screen</td>
+     <td>Thrid Screen</td>
   </tr>
   <tr>
     <td><img src="https://c8.alamy.com/comp/BFBAM5/red-rose-isolated-on-white-background-BFBAM5.jpg" width=270 height=480></td>
