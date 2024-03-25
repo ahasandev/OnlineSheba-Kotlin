@@ -15,6 +15,12 @@
       Coil for image loading
 
 🔆SCREENS
+
+
+|----------|:-------------:|----------|:-------------:|
+| ![1](https://github.com/ahasandev/OnlineSheba-Kotlin/assets/153377141/dfaef49e-94fe-4681-b0fc-f01702a390b1) | ![2](https://github.com/ahasandev/OnlineSheba-Kotlin/assets/153377141/06827ee8-7e3b-4c22-b9f9-0cf5841b1ce9) | ![3](https://github.com/ahasandev/OnlineSheba-Kotlin/assets/153377141/39ba437b-938f-4703-ba02-f98728b3552f) | ![4](https://github.com/ahasandev/OnlineSheba-Kotlin/assets/153377141/2851a5a8-c667-4a9b-aa61-1f5b06564cd7) | ![5](https://github.com/ahasandev/OnlineSheba-Kotlin/assets/153377141/cceb9f57-3184-490d-a37b-cf2033687537) | 
+
+
 <table>
   <tr>
     <td>First Screen</td>
@@ -22,9 +28,7 @@
      <td>Thrid Screen</td>
   </tr>
   <tr>
-    <td><img src="https://c8.alamy.com/comp/BFBAM5/red-rose-isolated-on-white-background-BFBAM5.jpg" width=200 height=480></td>
-    <td><img src="https://c8.alamy.com/comp/FKFBJF/in-ghent-there-is-an-gavensteen-from-the-middle-ages-FKFBJF.jpg" width=200 height=480></td
-    <td><img src="screenshots/Screenshot_1582745139.png" width=200 height=480></td>
+ 
   </tr>
  </table>
 
